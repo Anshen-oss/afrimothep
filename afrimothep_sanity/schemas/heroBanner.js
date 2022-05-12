@@ -8,6 +8,11 @@ export default {
       title: 'Title',
       type: 'string'
     },
+     {
+      name: 'subTitle',
+      title: 'Title 2',
+      type: 'string'
+    },
     {
       name: 'image',
       title: 'Image',
@@ -24,6 +29,11 @@ export default {
     {
       name: 'callToAction',
       title: 'Call To Action',
+      type: 'string',
+    },
+     {
+      name: 'cta_outline',
+      title: 'CTA',
       type: 'string',
     },
 

@@ -4,6 +4,8 @@ import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
+import Image from 'next/image'
+import logo from '../public/logo.png';
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -12,7 +14,7 @@ const navigation = [
   { name: 'Contact us', href: '#' },
 ]
 
-const HeroBanner = () => {
+const HeroBanner = ({ heroBanner, navigationData }) => {
   return (
       <div className="relative bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -34,11 +36,7 @@ const HeroBanner = () => {
                   <div className="flex items-center justify-between w-full md:w-auto">
                     <a href="#">
                       <span className="sr-only">Workflow</span>
-                      <img
-                        alt="Workflow"
-                        className="h-8 w-auto sm:h-10"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                      />
+                       <Image src={logo} width="57px" height="45px"/>
                     </a>
                     <div className="-mr-2 flex items-center md:hidden">
                       <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -49,9 +47,9 @@ const HeroBanner = () => {
                   </div>
                 </div>
                 <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                  {navigation.map((item) => (
-                    <a key={item.name} href={item.href} className="font-medium text-gray-500 hover:text-gray-900">
-                      {item.name}
+                  {navigationData[0].navItems.map((item) => (
+                    <a key={item.name} href={item.text} className="font-medium text-gray-500 hover:text-gray-900">
+                      {item.text}
                     </a>
                   ))}
                   <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
@@ -115,12 +113,11 @@ const HeroBanner = () => {
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">Devenez maître</span>{' '}
-                <span className="block text-indigo-600 xl:inline">de votre destin financier</span>
+                <span className="block xl:inline">{heroBanner.title}</span>
+                <span className="block text-indigo-600 xl:inline">{heroBanner.title2}</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                fugiat veniam occaecat fugiat aliqua.
+               {heroBanner.description}
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
@@ -128,7 +125,7 @@ const HeroBanner = () => {
                     href="#"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                   >
-                    Get started
+                   {heroBanner.callToAction}
                   </a>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
@@ -136,7 +133,7 @@ const HeroBanner = () => {
                     href="#"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
                   >
-                    Live demo
+                    {heroBanner.cta_outline}
                   </a>
                 </div>
               </div>
@@ -154,5 +151,8 @@ const HeroBanner = () => {
     </div>
   )
 }
+
+
+
 
 export default HeroBanner
