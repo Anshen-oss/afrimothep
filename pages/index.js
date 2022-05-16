@@ -1,14 +1,13 @@
-import HeroBanner from "../components/HeroBanner";
-
 import { client } from "../lib/client";
-import Footer from "../components/Footer";
+
+import { Footer, HeroBanner, Container } from '../components';
 
 const Home = ({ bannerData, navigationData }) => {
   return (
     <>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} navigationData={navigationData}  />
       {/* {console.log(bannerData)} */}
-
+      <Container />
        { console.log(navigationData[0].navItems)}
       <Footer />
     </>
