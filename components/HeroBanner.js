@@ -7,12 +7,12 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Image from 'next/image'
 import logo from '../public/logo.png';
 
-const navigation = [
+/* const navigation = [
   { name: 'Product', href: '#' },
   { name: 'Services', href: '#' },
   { name: 'About us', href: '#' },
   { name: 'Contact us', href: '#' },
-]
+] */
 
 const HeroBanner = ({ heroBanner, navigationData }) => {
   return (
@@ -89,13 +89,13 @@ const HeroBanner = ({ heroBanner, navigationData }) => {
                     </div>
                   </div>
                   <div className="px-2 pt-2 pb-3 space-y-1">
-                    {navigation.map((item) => (
+                    {navigationData[0].navItems.map((item) => (
                       <a
-                        key={item.name}
-                        href={item.href}
+                        key={item.text}
+                        href={item.text}
                         className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                       >
-                        {item.name}
+                        {item.text}
                       </a>
                     ))}
                   </div>

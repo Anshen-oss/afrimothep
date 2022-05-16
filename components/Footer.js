@@ -238,7 +238,7 @@ const Footer = () => {
   </div>
 
   <div class="text-center p-4">
-    © 2022 Copyright:
+    ©2022 Copyright:
     <a class="text-white" href="https://tailwind-elements.com/"> Afrimothep</a>
   </div>
 </footer>

@@ -8,6 +8,7 @@ const Home = ({ bannerData, navigationData }) => {
     <>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} navigationData={navigationData}  />
       {/* {console.log(bannerData)} */}
+
        { console.log(navigationData[0].navItems)}
       <Footer />
     </>
