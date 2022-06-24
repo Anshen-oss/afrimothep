@@ -1,20 +1,25 @@
 import { client } from "../lib/client";
 
-import { Footer, HeroBanner, Container } from '../components';
+import {
+  Footer,
+  HeroBanner,
+  Container,
+  Products,
+  Services,
+} from "../components";
 
-const Home = ({ bannerData, navigationData }) => {
+const Home = ({ bannerData, navigationData, servicesData }) => {
   return (
-    <>
-      <HeroBanner heroBanner={bannerData.length && bannerData[0]} navigationData={navigationData}  />
-      {/* {console.log(bannerData)} */}
-      <Container />
-       { console.log(navigationData[0].navItems)}
+    <div>
+      <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
+      <Products />
       <Footer />
-    </>
+    </div>
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
+/* export const getServerSideProps = async () => { */
   const bannerQuery = '*[_type == "heroBanner"]';
   const bannerData = await client.fetch(bannerQuery);
 
@@ -22,9 +27,8 @@ export const getServerSideProps = async () => {
   const navigationData = await client.fetch(navigationQuery);
 
   return {
-    props: { bannerData, navigationData }
+    props: { bannerData, navigationData },
   };
 };
-
 
 export default Home;

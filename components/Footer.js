@@ -177,63 +177,6 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-
-      <div class="mb-6">
-        <h5 class="uppercase font-bold mb-2.5">Links</h5>
-
-        <ul class="list-none mb-0">
-          <li>
-            <a href="#!" class="text-white">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 4</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h5 class="uppercase font-bold mb-2.5">Links</h5>
-
-        <ul class="list-none mb-0">
-          <li>
-            <a href="#!" class="text-white">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 4</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h5 class="uppercase font-bold mb-2.5">Links</h5>
-
-        <ul class="list-none mb-0">
-          <li>
-            <a href="#!" class="text-white">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 4</a>
-          </li>
-        </ul>
-      </div>
     </div>
   </div>
 

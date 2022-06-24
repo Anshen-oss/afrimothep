@@ -14,6 +14,7 @@
     "@heroicons/react": "^1.0.6",
     "@sanity/client": "^3.2.0",
     "@sanity/image-url": "^1.0.1",
+    "dh-component": "^1.0.0",
     "heroicons-react": "^1.4.1",
     "next": "12.1.6",
     "next-sanity-image": "^3.2.1",

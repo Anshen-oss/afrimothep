@@ -843,6 +843,11 @@
     "defined" "^1.0.0"
     "minimist" "^1.1.1"
 
+"dh-component@^1.0.0":
+  "integrity" "sha1-FYtxzWfkjMZUkG/vFnQaHOO9v3M="
+  "resolved" "https://registry.npmjs.org/dh-component/-/dh-component-1.0.0.tgz"
+  "version" "1.0.0"
+
 "didyoumean@^1.2.2":
   "integrity" "sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw=="
   "resolved" "https://registry.npmjs.org/didyoumean/-/didyoumean-1.2.2.tgz"

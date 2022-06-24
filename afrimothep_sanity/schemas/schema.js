@@ -5,8 +5,9 @@ import heroBanner from './heroBanner'
 import navigation from './navigation'
 import navItem from './navItem'
 import link from './link'
+import services from './services'
 
 export default createSchema({
   name: 'default',
-  types: schemaTypes.concat([ heroBanner, navigation, navItem, link ]),
+  types: schemaTypes.concat([ heroBanner, navigation, navItem, link, services ]),
 })
