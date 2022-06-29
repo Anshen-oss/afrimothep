@@ -3,7 +3,7 @@ import React from 'react';
 const Contact = () => {
   return (
     <>
-      <div class="container mx-auto pt-16">
+       <section class="mx-auto container py-20">
         <div class="lg:flex">
           <div class="xl:w-2/5 lg:w-2/5 bg-indigo-700 py-16 xl:rounded-bl rounded-tl rounded-tr xl:rounded-tr-none">
             <div class="xl:w-5/6 xl:px-0 px-8 mx-auto">
@@ -145,7 +145,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
